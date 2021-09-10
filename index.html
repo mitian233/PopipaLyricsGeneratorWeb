@@ -46,6 +46,12 @@
       </li>
     </a>
     <li class="mdui-subheader">More</li>
+    <a href="https://github.com/mitian233/PopipaLyricsGeneratorWeb/blob/master/js/dictionary.js">
+      <li class="mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons">book</i>
+        <div class="mdui-list-item-content">Contribute dictionary</div>
+      </li>
+    </a>
     <a href="mailto:mitian233@outlook.com">
       <li class="mdui-list-item mdui-ripple">
         <i class="mdui-list-item-icon mdui-icon material-icons">email</i>
@@ -62,6 +68,9 @@
         <a href="https://github.com/mitian233/PopipaLyricsGenerator">
           <li class="mdui-list-item mdui-ripple">Original Project</li>
         </a>
+        <a href="https://tieba.baidu.com/p/7319354592">
+          <li class="mdui-list-item mdui-ripple">Dictionary reference</li>
+        </a>
         <a href="https://www.ip138.com/useragent/">
           <li class="mdui-list-item mdui-ripple">UserAgent Lookup</li>
         </a>
@@ -74,11 +83,15 @@
   <div class="mdui-row">
     <div class="mdui-col-xs-12 mdui-col-sm-3">
       <div class="mdui-textfield">
-        <input class="mdui-textfield-input" type="text" id="s_counter" placeholder="How many sentences you want to gen?"/>
-      </div></div>
+        <input class="mdui-textfield-input" type="text" id="s_counter"
+               placeholder="How many sentences you want to gen?"/>
+      </div>
+    </div>
     <div class="mdui-col-xs-12 mdui-col-sm-9">
-      <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent" onclick="gen('s_counter','gen_result');">Generate!
-      </button></div>
+      <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent"
+              onclick="gen('s_counter','gen_result');">Generate!
+      </button>
+    </div>
   </div>
 
 
@@ -87,6 +100,10 @@
   </div>
   <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent"
           onclick="copy('gen_result');mdui.snackbar('Copied successfully');">Copy
+  </button>
+  <button class="mdui-btn mdui-btn-raised mdui-ripple"
+          onclick="document.getElementById('gen_result').value=' ';document.getElementById('gen_result').rows = 6 ;mdui.snackbar('TextArea Cleaned');">
+    Clean
   </button>
   <button class="mdui-btn mdui-btn-raised mdui-ripple" onclick="mdui.snackbar({
   message: 'Still under developing',
@@ -102,10 +119,18 @@
   }
 })">Share to twitter
   </button>
-  <hr>
-  <p>Python Edition:</p>
 
+  <hr>
+  <p id="date"></p><a href="https://github.com/mitian233/PopipaLyricsGenerator">Python Edition</a>
+  
 </div>
+<script type="text/javascript">
+  var myDate = new Date();
+  console.log(myDate.getFullYear());
+  window.onload = function () {
+    document.getElementById('date').innerHTML = ('Copyright ©mitian233 2021-' + myDate.getFullYear());
+  };
+</script>
 <script
   src="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/js/mdui.min.js"
   integrity="sha384-gCMZcshYKOGRX9r6wbDrvF+TcCCswSHFucUzUPwka+Gr+uHgjlYvkABr95TCOz3A"
