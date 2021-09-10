@@ -156,14 +156,14 @@
   <div class="mdui-row">
     <div class="mdui-col-sm-12 mdui-col-xs-12">
       <div class="mdui-textfield">
-      <textarea class="mdui-textfield-input" readonly="readonly" rows="2" placeholder="Generated Lyrics"
-                id="gen_result">Generated Lyrics</textarea>
+      <textarea class="mdui-textfield-input" rows="2" placeholder="Generated Lyrics"
+                id="gen_result"></textarea>
       </div>
       <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent"
               onclick="copy('gen_result');mdui.snackbar('Copied successfully');">Copy
       </button>
       <button class="mdui-btn mdui-btn-raised mdui-ripple"
-              onclick="document.getElementById('gen_result').value=' ';document.getElementById('gen_result').rows = 2 ;mdui.snackbar('TextArea Cleaned');">
+              onclick="document.getElementById('gen_result').value='';document.getElementById('gen_result').rows = 2 ;mdui.snackbar('TextArea Cleaned');">
         Clean
       </button>
       <button class="mdui-btn mdui-btn-raised mdui-ripple"
